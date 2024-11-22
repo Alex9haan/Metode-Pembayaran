@@ -1,0 +1,92 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    margin: 0;
+}
+
+/* Pembungkus untuk seluruh metode pembayaran */
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding: 20px;
+}
+
+/* Teks header */
+.payment-header p {
+    text-align: center;
+    margin-bottom: 10px; /* Increased spacing between the texts */
+}
+
+.payment-header strong {
+    font-size: 1.2em;
+}
+
+/* QRIS logo */
+.qris-logo {
+    margin-top: 30px; /* Added margin to create space between the text and QRIS logo */
+    margin-bottom: 30px; /* Added margin to create space between QRIS logo and the methods */
+}
+
+.qris-logo img {
+    width: 80px; /* Ukuran logo QRIS */
+}
+
+/* Grid untuk metode pembayaran */
+.methods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dua kolom */
+    gap: 20px; /* Jarak antar-kotak */
+    width: 100%; /* Lebar 100% dari container */
+}
+
+/* Kotak metode pembayaran */
+.method {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* Warna kotak putih */
+    border-radius: 10px; /* Sudut kotak melengkung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow */
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.method:hover {
+    transform: scale(1.05); /* Sedikit membesar saat hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Shadow lebih besar saat hover */
+}
+
+.method img {
+    width: 50px; /* Ukuran logo */
+    height: auto;
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 480px) {
+    .method img {
+        width: 60px; /* Logo lebih kecil pada layar kecil */
+    }
+    .methods {
+        gap: 15px; /* Kurangi jarak antar-kotak */
+    }
+    .qris-logo img {
+        width: 60px; /* Ukuran logo QRIS lebih kecil pada layar kecil */
+    }
+}
